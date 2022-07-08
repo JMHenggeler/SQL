@@ -1,0 +1,26 @@
+- Create a yarn store database
+
+CREATE TABLE yarn ( id INTEGER PRIMARY KEY, yarn_type TEXT, weight NUMERIC, yards INTEGER, price INTEGER );
+
+INSERT INTO yarn VALUES(1,"Acrylic",50, 75, 6);
+INSERT INTO yarn VALUES(2,"Alpaca", 50, 75, 20);
+INSERT INTO yarn VALUES(3,"Bamboo", 50, 75, 20);
+INSERT INTO yarn VALUES(4,"Cotton Blend", 50,75, 15);
+INSERT INTO yarn VALUES(5,"Cotton",50, 75, 9);
+INSERT INTO yarn VALUES(6,"Flax Yarn", 50, 75,10);
+INSERT INTO yarn VALUES(7,"Merino", 50, 75, 25);
+INSERT INTO yarn VALUES(8,"Mohair", 50, 75, 18);
+INSERT INTO yarn VALUES(9,"Polyamide", 50, 75, 10);
+INSERT INTO yarn VALUES(10,"Polyester",50, 75, 8);
+INSERT INTO yarn VALUES(11,"Silk", 50, 100, 45);
+INSERT INTO yarn VALUES(12,"Wool", 50, 75,9);
+INSERT INTO yarn VALUES(13,"Wool Blend", 50, 75, 12);
+INSERT INTO yarn VALUES(14,"Mega Yarn",100, 200, 25);
+INSERT INTO yarn VALUES(15,"Tape and Ribbon", 50, 75, 8);
+
+--display the database ordered by price
+SELECT * FROM yarn 
+ORDER BY price;
+
+--what is the avg price for a skein of yarn?
+SELECT AVG(price) FROM yarn;
